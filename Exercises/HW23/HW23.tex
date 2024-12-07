@@ -139,6 +139,59 @@ we know
     &= \frac{(-1)^{x+\bar{y}}(-1)^{x}\ket{1\bar{y}}+(-1)^{x+\bar{y}}\ket{0y}}{\sqrt{2}} = (-1)^{x+\bar{y}}\ket{\beta_{xy}}
 \end{align*}
 \section*{Exercise 7.7}
+The commutator is
+\begin{align*}    
+[H_{I}, \vec{\sigma}_A \cdot \vec{\sigma}_B] &= \left[ \frac{\mu^2}{r^3} \left( \vec{\sigma}_A \cdot \vec{\sigma}_B - 3 Z_A Z_B \right), \vec{\sigma}_A \cdot \vec{\sigma}_B \right] \\
+&= \frac{\mu^2}{r^3} \left( [\vec{\sigma}_A \cdot \vec{\sigma}_B, \vec{\sigma}_A \cdot \vec{\sigma}_B] - 3 [Z_A Z_B, \vec{\sigma}_A \cdot \vec{\sigma}_B] \right).
+\end{align*}
+since any operator commutes with itself
+\[
+[\vec{\sigma}_A \cdot \vec{\sigma}_B, \vec{\sigma}_A \cdot \vec{\sigma}_B] = 0,
+\]
+the second term involves \( [Z_A Z_B, \vec{\sigma}_A \cdot \vec{\sigma}_B] \), from example 7.4 we have
+\begin{align}
+    Z_A Z_B &= \op{00}{00} - \op{01}{01} - \op{10}{10} + \op{11}{11},\nonumber\\
+    \vec{\sigma}_A \cdot \vec{\sigma}_B &= \op{00}{00} - \op{01}{01} - \op{10}{10} + \op{11}{11} + 2\op{01}{10} + 2\op{10}{01} \label{sigasigb}
+\end{align}
+we can see \( [Z_A Z_B, \vec{\sigma}_A \cdot \vec{\sigma}_B] = 0 \), Thus
+\[
+[H, \vec{\sigma}_A \cdot \vec{\sigma}_B] = 0.
+\]
+\( H_{I} \) commutes with \( \vec{\sigma}_A \cdot \vec{\sigma}_B \), meaning they share the same eigenstates.
+the eigenstates were
+\begin{align*}
+    \ket{\phi_{1}} = \frac{\ket{01}+\ket{10}}{\sqrt{2}},\quad \ket{\phi_2} = \ket{11},\quad \ket{\phi_3} = \ket{00},\quad \ket{\phi_4} = \frac{\ket{01}-\ket{10}}{\sqrt{2}},
+\end{align*}
+to get eigenvalue corresponding to the $\ket{\phi_1}$ using \ref{sigasigb}
+\begin{align*}
+    \vec{\sigma}_A \cdot \vec{\sigma}_B \ket{\phi_{1}} = \lambda_{1} \ket{\phi_{1}}
+\end{align*}
+\begin{align*}
+    \vec{\sigma}_A \cdot \vec{\sigma}_B \ket{\phi_{1}} = \frac{1}{\sqrt{2}}\bigg(-\ket{10}+2\ket{01}-\ket{01}+2\ket{10}\bigg) =  \frac{\ket{01}+\ket{10}}{\sqrt{2}} & = \ket{\phi_{1}} 
+\end{align*}
+so $\lambda_1=1$, 
+to get eigenvalue corresponding to the $\ket{\phi_2}$
+\begin{align*}
+    \vec{\sigma}_A \cdot \vec{\sigma}_B \ket{\phi_{2}} = \lambda_{2} \ket{\phi_{2}}
+\end{align*}
+\begin{align*}
+    \vec{\sigma}_A \cdot \vec{\sigma}_B \ket{\phi_{2}} = \ket{11} = \ket{\phi_{2}} 
+\end{align*}
+so $\lambda_2=1$, to get eigenvalue corresponding to the $\ket{\phi_3}$
+\begin{align*}
+    \vec{\sigma}_A \cdot \vec{\sigma}_B \ket{\phi_{3}} = \lambda_{3} \ket{\phi_{3}}
+\end{align*}
+\begin{align*}
+    \vec{\sigma}_A \cdot \vec{\sigma}_B \ket{\phi_{3}} = \ket{00} = \ket{\phi_{3}} 
+\end{align*}
+so $\lambda_3=1$,  to get eigenvalue corresponding to the $\ket{\phi_4}$
+\begin{align*}
+    \vec{\sigma}_A \cdot \vec{\sigma}_B \ket{\phi_{4}} = \lambda_{4} \ket{\phi_{4}}
+\end{align*}
+\begin{align*}
+    \vec{\sigma}_A \cdot \vec{\sigma}_B \ket{\phi_{4}} = \frac{1}{\sqrt{2}}\bigg(-\ket{10}+2\ket{01}+\ket{01}-2\ket{10}\bigg) = \frac{3\ket{01}-3\ket{10}}{\sqrt{2}} = 3\ket{\phi_{4}} 
+\end{align*}
+so $\lambda_4=3$.
 \section*{Exercise 7.9}
 \begin{align*}
     \rho = \begin{pmatrix}
